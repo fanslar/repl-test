@@ -3,7 +3,7 @@ export function getDevProxyModule(module: string): undefined | string {
 }
 
 export function getProdProxyModule(module: string): undefined | string {
-  return import.meta.env.PROD ? `${location.origin}/imports/${module}.js` : `${location.origin}/src/proxy/prod/${module}.ts`
+  return import.meta.env.PROD ? `${location.origin}${location.pathname}/imports/${module}.js` : `${location.origin}/src/proxy/prod/${module}.ts`
 }
 
 export function getFilenameFromPath(path: string): string {
