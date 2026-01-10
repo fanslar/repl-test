@@ -11,6 +11,7 @@ export default defineConfig(
     resolve: {
       dedupe: ['vue'],
     },
+    base: './',
     plugins: [
       vue(),
       UnoCSS(),
