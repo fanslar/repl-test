@@ -1,8 +1,8 @@
 <script setup lang='ts'>
 import { type OutputModes, useStore, Repl, useVueImportMap, mergeImportMap } from '@vue/repl';
 import MonacoEditor from '@vue/repl/monaco-editor';
-import DocsSFCCode from './template/Docs.vue?raw';
-import TestSFCCode from './template/Test.vue?raw';
+import DocsSFCCode from './template/docs.vue?raw';
+import TestSFCCode from './template/test.vue?raw';
 import { decode, getDevProxyModule, getFilenameFromPath, getProdProxyModule, getTextFromPath } from './utils';
 
 const window = globalThis.window as any
