@@ -1,0 +1,10 @@
+{
+  "docs": "https://raw.githubusercontent.com/toss/es-toolkit/main/docs/zh_hans/reference/array/at.md",
+  "test": "https://raw.githubusercontent.com/toss/es-toolkit/main/src/array/at.spec.ts",
+  "sources": [
+    "https://raw.githubusercontent.com/toss/es-toolkit/main/src/array/at.ts"
+  ]
+}
+// encoded:
+// eyJkb2NzIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3Rvc3MvZXMtdG9vbGtpdC9tYWluL2RvY3MvemhfaGFucy9yZWZlcmVuY2UvYXJyYXkvYXQubWQiLCJ0ZXN0IjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3Rvc3MvZXMtdG9vbGtpdC9tYWluL3NyYy9hcnJheS9hdC5zcGVjLnRzIiwic291cmNlcyI6WyJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdG9zcy9lcy10b29sa2l0L21haW4vc3JjL2FycmF5L2F0LnRzIl19
+
