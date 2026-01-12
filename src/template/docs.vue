@@ -31,3 +31,8 @@ onMounted(() => {
 <template>
   <div :class="['markdown-body']" class="p-6" v-html="htmlContent"></div>
 </template>
+
+<style scoped>
+@import url('./imports/markdown-it.css');
+@import url('./imports/hljs.css');
+</style>

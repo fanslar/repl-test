@@ -18,7 +18,10 @@ const loading = ref(true)
 const store = (window.store = useStore(
   toRefs(
     reactive({
-      activeFile: 'src/Docs.vue',
+      // activeFile: 'src/Docs.vue',
+      // files: {
+      //   'src/Docs.vue': new File('src/Docs.vue', DocsSFCCode, true),
+      // },
       builtinImportMap: mergeImportMap(
         unref(builtinImportMap), {
         imports: {
@@ -87,7 +90,11 @@ if (query.has(KEY_INIT_CONFIG)) {
     }
     loading.value = false
   })
-}else{
+} else {
+  if (store.files['src/Docs.vue'])
+    store.files['src/Docs.vue'].hidden = true
+  if (store.files['src/Test.vue'])
+    store.files['src/Test.vue'].hidden = true
   loading.value = false
 }
 
@@ -96,9 +103,11 @@ const theme = ref<'light' | 'dark'>('dark')
 window.theme = theme
 const previewTheme = ref(false)
 window.previewTheme = previewTheme
+
+const isProduction = import.meta.env.PROD
 </script>
 
 <template>
-  <Repl v-if="!loading" :store="store" :theme="theme" preview-theme :clear-console="true" :editor="MonacoEditor"
+  <Repl v-if="!loading" :store="store" :theme="theme" preview-theme :clear-console="isProduction" :editor="MonacoEditor"
     show-open-source-map layout-reverse />
 </template>
