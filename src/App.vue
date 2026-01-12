@@ -45,7 +45,6 @@ watchEffect(() => history.replaceState({}, '', store.serialize()))
 
 const KEY_INIT_CONFIG = 'icfg'
 if (query.has(KEY_INIT_CONFIG)) {
-  console.log('JSON.parse(atob(query.get(KEY_INIT_CONFIG)!)) : ', JSON.parse(atob(query.get(KEY_INIT_CONFIG)!)))
   const { docs, test, sources } = decode<{ docs: string; test: string; sources: string[] }>(query.get(KEY_INIT_CONFIG)!)
 
   // 移除参数，避免重复初始化
@@ -80,10 +79,8 @@ if (query.has(KEY_INIT_CONFIG)) {
       }),
     ]
   ).finally(async () => {
-    console.log('files : ', files)
     await store.setFiles(files, 'src/Docs.vue')
     if (sources[0]) {
-      console.log('getStoreFilenameFromPath(sources[0]) : ', getStoreFilenameFromPath(sources[0]))
       store.setActive(getStoreFilenameFromPath(sources[0]))
       store.files['src/Docs.vue']!.hidden = true
       store.files['src/Test.vue']!.hidden = true
